@@ -1,0 +1,10 @@
+<div *ngIf="activo">
+  Mostrar contenido
+</div>
+
+<br><br><br>
+
+<div *ngFor="let objeto in listaObjetos; let i = index">
+  <h1>Persona: </h1>
+  <label>La persona es: {{objeto.edad}} - {{objeto.nombre}}</label>
+</div>

@@ -5,6 +5,7 @@ import { IonHeader, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonContent 
 @Component({
   selector: 'app-folder',
   templateUrl: './folder.page.html',
+  standalone: true,
   styleUrls: ['./folder.page.scss'],
   imports: [IonHeader, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonContent],
 })

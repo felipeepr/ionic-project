@@ -12,7 +12,7 @@ export const routes: Routes = [
       import('./folder/folder.page').then((m) => m.FolderPage),
   },
   {
-    path: 'my-profile',
+    path: 'pages/my-profile',
     loadComponent: () => import('./pages/my-profile/my-profile.page').then( m => m.MyProfilePage)
   },
 ];
