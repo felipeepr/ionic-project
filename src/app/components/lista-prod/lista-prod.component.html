@@ -1,10 +1,23 @@
-<div *ngIf="activo">
+<ion-button (click)="cambiarValor()">Activar</ion-button>
+<div *ngIf="activo; else ContenidoElse">
+  <div>
   Mostrar contenido
+  </div>
+
+  <br><br><br>
+
+  <div *ngFor="let fruta of listaProductos; let i = index">
+    <h1>Fruta</h1>
+    <label>la fruta es: {{i + 1}} - {{fruta}}</label>
+  </div>
+
+
+  <div *ngFor="let objeto of listaObjetos">
+    <h1>Persona</h1>
+    <label>la fruta es: {{objeto.nombre}} - {{objeto.edad}}</label>
+  </div>
 </div>
 
-<br><br><br>
-
-<div *ngFor="let objeto in listaObjetos; let i = index">
-  <h1>Persona: </h1>
-  <label>La persona es: {{objeto.edad}} - {{objeto.nombre}}</label>
-</div>
+<ng-template #ContenidoElse>
+  No Mostrar contenido ****************
+</ng-template>

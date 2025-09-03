@@ -1,31 +1,35 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Producto } from '../../data/classes/producto.model';
-import { Producto } from '../../data/interface/productoInterface.model';
+import { ProductoInterface } from '../../data/interface/productoInterface.model';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonLabel, IonButton} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-lista-prod',
   templateUrl: './lista-prod.component.html',
   standalone: true,
   styleUrls: ['./lista-prod.component.scss'],
-  imports: [ Producto ],
+  imports: [ IonLabel, CommonModule, IonContent, IonButton],
 })
 export class ListaProdComponent  implements OnInit {
-
-  activo: boolean = false;
   producto: Producto;
   productoInterface: Producto;
-  listaProducto: string[] = ["Manzana", "Pera", "Kiwi", "Banano"];
+  activo: boolean = true;
+  listaProductos: string[] = ["Manzana", "Pera", "Kiwi", "Banano"];
 
   listaObjetos = [
-    {nombre: "Juana",
+    {
+      nombre: "Juana",
       edad: 25
     },
-    {nombre: "Andres",
-      edad: 25
+    {
+      nombre: "Andres",
+      edad: 19
     },
-    {nombre: "Camilo",
-      edad: 25
-    },
+    {
+      nombre: "Camila",
+      edad: 32
+    }
   ]
 
   constructor() { }
@@ -40,11 +44,17 @@ export class ListaProdComponent  implements OnInit {
     this.activo = !this.activo;
   }
 
-  changePriceInterface(){´
+  cambiarValor(){
+    this.activo = !this.activo;
+  }
+
+  changePriceInterface(){
     this.productoInterface = {
+      sell() {
+          console.log("A");
+      },
       id: 1,
-      name: 'PC2'
-      (property) ListaProdComponent.activo: boolean = true,
+      name: 'PC2',
       price: 2000
     }
   }
