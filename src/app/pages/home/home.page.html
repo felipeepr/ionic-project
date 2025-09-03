@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>CRYPTO SHOP</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<div class="BTC">
+  <img width="150px" height="150px" [src]="img" class="btcImg"/>
+  <ion-button (click)="changeImg()" class="changeBtn" size="small">
+    <ion-icon slot="start" name="star"></ion-icon>
+    Change Image</ion-button>
+  <ion-input [disabled]="switchForm" labelPlacement="floating" [(ngModel)]="user">
+    <div slot="label">Email <ion-text color="danger">(Required):</ion-text></div>
+  </ion-input>
+  <ion-input [disabled]="switchForm" label="Delivery Address: " labelPlacement="floating" [(ngModel)]="deliverAddress"></ion-input>
+  <ion-input [disabled]="switchForm" label="Country: " labelPlacement="floating" [(ngModel)]="country"></ion-input>
+  <ion-input [disabled]="switchForm" label="City: " labelPlacement="floating" [(ngModel)]="city"></ion-input>
+  <ion-input [disabled]="switchForm" label="Language: " labelPlacement="floating" [(ngModel)]="lang"></ion-input>
+  <ion-input [disabled]="switchForm" label="Currency: " labelPlacement="floating" [(ngModel)]="currency"></ion-input>
+  <ion-button (click)="statusForm()" class="changeBtn" size="small">DISABLE/ENABLE FORM
+    <ion-icon slot="start" name="star"></ion-icon>
+  </ion-button>
+    <ion-button (click)="saveForm()" class="changeBtn" size="small">
+      <ion-icon slot="start" name="star"></ion-icon>
+    SAVE FORM</ion-button>
+</div>
+
+<div class="ETH">
+  <h1>NEXT </h1>
+  <h1>COIN</h1>
+  <h1>COMING</h1>
+  <h1>VERY</h1>
+  <h1>SOON.</h1> 
+  <h1>STAY TUNED!!!</h1>
+  <!-- 
+  <ion-img src="https://t4.ftcdn.net/jpg/07/72/94/23/360_F_772942398_uKpxMOAqDG2cunliJkDAn31b2LHzHKQU.jpg" class="ethImg"></ion-img>
+  <ion-button class="changeBtn" size="small">
+    <ion-icon slot="start" name="star"></ion-icon>
+    Change Image</ion-button>
+  <ion-input label="User: " value="ETH"></ion-input>
+  <ion-input label="Delivery Address: " value="JANEIRO STREET"></ion-input>
+  <ion-input label="Country: " value="BR"></ion-input>
+  <ion-input label="City: " value="RIO DE JANEIRO"></ion-input>
+  <ion-input label="Language: " value="PR"></ion-input>
+  <ion-input label="Currency: " value="REAL BR"></ion-input>
+  -->
+</div>
+
+
+</ion-content>
